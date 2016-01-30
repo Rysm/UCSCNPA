@@ -27,8 +27,11 @@ angular.module('starter', ['ionic'])
 
 .state( 'login', {
     url: '/login',
-    templateURL: 'templates/index.html'
+    templateURL: 'templates/index.html',
+    controller: 'LoginCtrl'
 })
+
+$urlRouterProvider.otherwise('login');
 
 /*
 .state( 'home', {
