@@ -28,13 +28,13 @@ angular.module('starter', ['ionic'])
 
 .state( 'login', {
     url: '/login',
-    templateURL: '/templates/index.html',
+    templateURL: 'index.html',
     controller: 'LoginCtrl'
 })
 
 .state( 'maps', {
     url: '/map',
-    templateURL: '/templates/map.html',
+    templateURL: 'map.html',
     controller: 'MapCtrl'
 })
 
