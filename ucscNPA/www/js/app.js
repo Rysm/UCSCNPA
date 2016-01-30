@@ -27,25 +27,19 @@ angular.module('starter', ['ionic'])
 .config(function($stateProvider, $urlRouterProvider) {
 
 .state( 'login', {
-    url: '/',
-    templateURL: 'templates/index.html',
+    url: '/login',
+    templateURL: '/templates/index.html',
     controller: 'LoginCtrl'
 })
 
 .state( 'maps', {
     url: '/map',
-    templateURL: 'templates/map.html',
+    templateURL: '/templates/map.html',
     controller: 'MapCtrl'
 })
 
-$urlRouterProvider.otherwise('login');
+//NOTE LOGIN SHOULD BE DEFAULT
+//FOR TESTING PURPOSES, MAPS WAS MADE DEFAULT
+$urlRouterProvider.otherwise('maps');
 
 });
-
-
-/*
-.state( 'home', {
-    url: '/home',
-    templateURL: 'templates/home.html'
-})
-*/
