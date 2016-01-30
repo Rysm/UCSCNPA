@@ -22,3 +22,17 @@ angular.module('starter', ['ionic'])
     }
   });
 })
+
+//App States
+
+.state( 'login', {
+    url: '/login',
+    templateURL: 'templates/index.html'
+})
+
+/*
+.state( 'home', {
+    url: '/home',
+    templateURL: 'templates/home.html'
+})
+*/
