@@ -24,14 +24,24 @@ angular.module('starter', ['ionic'])
 })
 
 //App States
+.config(function($stateProvider, $urlRouterProvider) {
 
 .state( 'login', {
-    url: '/login',
+    url: '/',
     templateURL: 'templates/index.html',
     controller: 'LoginCtrl'
 })
 
+.state( 'maps', {
+    url: '/map',
+    templateURL: 'templates/map.html',
+    controller: 'MapCtrl'
+})
+
 $urlRouterProvider.otherwise('login');
+
+});
+
 
 /*
 .state( 'home', {

@@ -1,4 +1,4 @@
-//State controllers
+//Login Controller
 
 .controller('LoginCtrl', function($scope, LoginService, $ionicPopup, $state) {
     $scope.data = {};
@@ -14,3 +14,8 @@
         });
     }
 })
+
+//Map Controller
+.controller('MapCtrl', function($scope, $state, $cordovaGeolocation) {
+ 
+});
