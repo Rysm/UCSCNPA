@@ -115,7 +115,7 @@ angular.module('app.routes', [])
     .state('login', {
       url: '/login',
       templateUrl: 'templates/login.html',
-      controller: 'loginCtrl'
+      controller: 'loginController'
     })
 
 
@@ -125,7 +125,7 @@ angular.module('app.routes', [])
     .state('createAccount', {
       url: '/signup',
       templateUrl: 'templates/createAccount.html',
-      controller: 'createAccountCtrl'
+      controller: 'registerController'
     })
 
 
