@@ -1,19 +1,36 @@
+<body ng-app="app" ng-control="AppCtrl">
 <ion-view title="Create Event">
     <ion-content overflow-scroll="true" padding="true" class="has-header">
         <form class="list">
+            <label class="item item-input item-select">
+              <span class="input-label">Select Organization</span>
+                <select>
+                  <option selected> None </option>
+                  <option>Bike Santa Cruz</option>
+                  <option>Coastal WaterShed</option>
+                  <option>California Rural Legal Assistance, Inc.</option>
+                  <option>Day Worker's Center</option>
+                </select>
+          </label>
+
             <label class="item item-input">
-                <input type="text" placeholder="Name of event ">
+                <input type="text" ng-model="message.name" class="msg-input"  placeholder="Name of event ">
             </label>
             <label class="item item-input">
-                <input type="text" placeholder="Location">
+                <input type="text" ng-model="message.desc" class="msg-input" placeholder="description">
             </label>
             <label class="item item-input">
-                <input type="text" placeholder="Phone ">
+                <input type="text" ng-model="message.loc" class="msg-input"  placeholder="Location">
             </label>
             <label class="item item-input">
-                <input type="text" placeholder="Email">
+                <input type="text" ng-model="message.phone" class="msg-input"  placeholder="Phone #">
+            </label>
+            <label class="item item-input">
+                <input type="text" ng-model="message.email" class="msg-input" placeholder="Email">
             </label>
         </form>
-        <button class="button button-balanced button-block ">Submit!</button>
+        <button type="submit" class="button button-small" ng-click="addEvent(name,desc,loc,phone,email)" id="add-message">
+          Submit!</button>
     </ion-content>
 </ion-view>
+</body>
