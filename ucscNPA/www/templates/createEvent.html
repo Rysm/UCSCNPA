@@ -5,7 +5,6 @@
             <label class="item item-input item-select">
               <span class="input-label">Select Organization</span>
                 <select>
-                  <option selected> None </option>
                   <option>Bike Santa Cruz</option>
                   <option>Coastal WaterShed</option>
                   <option>California Rural Legal Assistance, Inc.</option>
@@ -14,22 +13,22 @@
           </label>
 
             <label class="item item-input">
-                <input type="text" ng-model="message.name" class="msg-input"  placeholder="Name of event ">
+                <input type="text" placeholder="Name of event ">
             </label>
             <label class="item item-input">
-                <input type="text" ng-model="message.desc" class="msg-input" placeholder="description">
+                <input type="text" placeholder="description">
             </label>
             <label class="item item-input">
-                <input type="text" ng-model="message.loc" class="msg-input"  placeholder="Location">
+                <input type="text" placeholder="Location">
             </label>
             <label class="item item-input">
-                <input type="text" ng-model="message.phone" class="msg-input"  placeholder="Phone #">
+                <input type="text"  placeholder="Phone #">
             </label>
             <label class="item item-input">
-                <input type="text" ng-model="message.email" class="msg-input" placeholder="Email">
+                <input type="text"  placeholder="Email">
             </label>
         </form>
-        <button type="submit" class="button button-small" ng-click="addEvent(name,desc,loc,phone,email)" id="add-message" style= "color:PaleVoiletRed;">
+        <button type="submit" class="button button-small" style= "color:PaleVoiletRed;">
           Submit!</button>
     </ion-content>
 </ion-view>
