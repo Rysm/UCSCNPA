@@ -18,11 +18,11 @@ angular.module('app.routes', [])
       }
     })
 
-    .state('menu.🔍Search', {
+    .state('menu.Search', {
       url: '/search',
       views: {
         'side-menu21': {
-          templateUrl: 'templates/🔍Search.html',
+          templateUrl: 'templates/search.html',
           controller: 'SearchCtrl'
         }
       }
@@ -34,12 +34,12 @@ angular.module('app.routes', [])
       templateUrl: 'templates/menu.html'
     })
 
-    .state('menu.🎪RequestEvent', {
+    .state('menu.requestEvent', {
       url: '/request',
       views: {
         'side-menu21': {
-          templateUrl: 'templates/🎪RequestEvent.html',
-          controller: '🎪RequestEventCtrl'
+          templateUrl: 'templates/requestEvent.html',
+          controller: 'RequestEventCtrl'
         }
       }
     })
