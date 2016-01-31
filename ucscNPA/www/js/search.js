@@ -4,4 +4,4 @@ var options = {
   valueNames: [ 'name']
 };
 
-var userList = new List('users', options);
+var userList = new List('orgs', options);

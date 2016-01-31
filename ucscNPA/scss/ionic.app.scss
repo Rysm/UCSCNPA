@@ -1,3 +1,7 @@
+@import
+  "path_to_bower_components/ionic/scss/ionic",
+  "path_to_bower_components/ionic-filter-bar/scss/ionic.filter.bar";
+  
 /*
 To customize the look and feel of Ionic, you can override the variables
 in ionic's _variables.scss file.
@@ -24,7 +28,7 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 .scroll {
     height: 100%;
 }
- 
+
 #map {
     width: 100%;
     height: 100%;

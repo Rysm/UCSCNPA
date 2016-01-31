@@ -4,8 +4,8 @@ angular.module('app.controllers', [])
 
 })
 
-.controller('🔍SearchCtrl', function($scope) {
-  
+.controller('SearchCtrl', function($scope) {
+
 })
 
 .controller('🎪RequestEventCtrl', function($scope) {
