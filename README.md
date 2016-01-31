@@ -4,15 +4,10 @@ UCSC NPA is an application that delivers a platform for both individuals in nonp
 
 Individuals:
 - find nearby nonprofits
-- search for based on purpose
+- search for nonprofits
 - request for certain events from org
-- donating
-- appeciate orgs or nah
-- sms to request latest news from orgs
 
 Orgs:
 - events
-- keep track of budgets and income
-- keep track of inventory
 - set location and times contact info
-- send sms to members
+- stay in contact with the community
