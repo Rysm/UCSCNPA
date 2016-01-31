@@ -13,10 +13,10 @@
           </label>
 
             <label class="item item-input">
-                <input type="text" placeholder="Name of event ">
+                <input type="text" placeholder="Name of Event" ng-model="event.text" class="msg-input">
             </label>
             <label class="item item-input">
-                <input type="text" placeholder="description">
+                <input type="text" placeholder="Description">
             </label>
             <label class="item item-input">
                 <input type="text" placeholder="Location">
@@ -28,7 +28,7 @@
                 <input type="text"  placeholder="Email">
             </label>
         </form>
-        <button type="submit" class="button button-small" style= "color:PaleVoiletRed;">
+        <button type="submit" class="button button-small" ng-click="addEvent(event)" id="add-message" style= "color:PaleVoiletRed;">
           Submit!</button>
     </ion-content>
 </ion-view>

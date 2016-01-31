@@ -9,3 +9,28 @@ angular.module('app', ['ionic', 'app.controllers', 'app.routes', 'app.services',
 
 // our firebase url
 .constant('FBURL', 'https://ucscnpa.firebaseio.com/')
+
+.factory('Auth', function($firebaseAuth, FBURL, $window) {
+  var ref = new $window.Firebase(FBURL);
+  return $firebaseAuth(ref);
+})
+
+.factory('Events', function($firebaseArray, FBURL, $window) {
+  var ref = new $window.Firebase(FBURL + '/events');
+  return $firebaseArray(ref);
+})
+
+// Add events to the home feed
+.controller('AppCtrl', function($scope, Auth, Events) {
+  // Bind events to the scope
+  $scope.events = Events;
+
+  // Add a message to a synchronized array using $add with $firebaseArray
+  $scope.addEvent = function(event) {
+      Events.$add({
+        text: event.text
+      });
+      event.text = "";
+  };
+
+})
