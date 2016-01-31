@@ -1,4 +1,4 @@
-angular.module('app.routes', [])
+angular.module('app.routes', ['ionic', 'app.controllers', 'app.routes', 'app.services', 'app.directives','firebase','ngStorage', 'ngCordova','firebase','ngMessages'])
 
 .config(function($stateProvider, $urlRouterProvider) {
 
@@ -7,6 +7,27 @@ angular.module('app.routes', [])
   // Set up the various states which the app can be in.
   // Each state's controller can be found in controllers.js
   $stateProvider
+    .state('maps', {
+      url: '/nearby',
+      templateUrl: 'templates/maps.html',
+      controller: 'mapsCtrl'
+    })
+      .state('login', {
+      url: '/login',
+      templateUrl: 'templates/login/login.html',
+      controller:'loginController'
+    })
+    .state('forgot', {
+      url: '/forgot',
+      templateUrl: 'templates/forgot/forgotPassword.html',
+      controller:'forgotController'
+    })
+    .state('register', {
+      url: '/register',
+      templateUrl: 'templates/register/createAccount.html',
+      controller:'registerController'
+    })
+
 
     .state('menu.home', {
       url: '/home',
@@ -84,29 +105,6 @@ angular.module('app.routes', [])
       }
     })
 
-    .state('login', {
-      url: '/login',
-      templateUrl: 'templates/login.html',
-      controller: 'loginCtrl'
-    })
-
-    .state('createAccount', {
-      url: '/signup',
-      templateUrl: 'templates/createAccount.html',
-      controller: 'registerCtrl'
-    })
-
-    .state('forgotPassword', {
-      url: '/forgot',
-      templateUrl: 'templates/forgotPassword.html',
-      controller: 'forgotCtrl'
-    })
-
-    .state('maps', {
-      url: '/nearby',
-      templateUrl: 'templates/maps.html',
-      controller: 'mapsCtrl'
-    })
     ;
 
   // if none of the above states are matched, use this as the fallback
