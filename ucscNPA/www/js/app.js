@@ -6,23 +6,7 @@
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
 angular.module('app', ['ionic', 'app.controllers', 'app.routes', 'app.services', 'app.directives','firebase'])
-
-//angular.module('ionic-firebase-seed', ['ionic', 'firebase'])
-
-
-.run(function($ionicPlatform) {
-  $ionicPlatform.ready(function() {
-    // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
-    // for form inputs)
-    if(window.cordova && window.cordova.plugins.Keyboard) {
-      cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
-    }
-    if(window.StatusBar) {
-      // org.apache.cordova.statusbar required
-      StatusBar.styleDefault();
-    }
-  });
-})
+angular.module('ionic.example', ['ionic'])
 
 // our firebase url
 .constant('FBURL', 'https://ucscnpa.firebaseio.com/')
@@ -55,27 +39,10 @@ angular.module('app', ['ionic', 'app.controllers', 'app.routes', 'app.services',
 
 })
 
-.run(function($ionicPlatform, FBURL) {
-  $ionicPlatform.ready(function() {
-    // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
-    // for form inputs)
-    if (FBURL === "https://DEFAULT.firebaseio.com/") {
-      angular.element(document.getElementById('app-content')).html('<h1>Please configure your Firebase URL in www/js/app.js before running!</h1>');
-    }
-    if(window.cordova && window.cordova.plugins.Keyboard) {
-      cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
-    }
-    if(window.StatusBar) {
-      StatusBar.styleDefault();
-    }
-  });
-});
-
 //google maperino pleaserino
-angular.module('ionic.example', ['ionic'])
 
-    .controller('MapCtrl', function($scope, $ionicLoading, $compile) {
-      function initialize() {
+.controller('MapCtrl', function($scope, $ionicLoading, $compile) {
+      $scope.init = function(){
 
         //By default begin in downtown Santa Cruz
         var myLatlng = new google.maps.LatLng(36.970231,-122.025061);
@@ -116,7 +83,7 @@ angular.module('ionic.example', ['ionic'])
         $scope.map = map;
       }
 
-      google.maps.event.addDomListener(window, 'load', initialize);
+      //google.maps.event.addDomListener(window, 'load', initialize);
 
       $scope.centerOnMe = function() {
 

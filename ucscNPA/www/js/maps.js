@@ -1,7 +1,7 @@
 angular.module('ionic.example', ['ionic'])
 
     .controller('MapCtrl', function($scope, $ionicLoading, $compile) {
-      function initialize() {
+      $scope.init = function(){
 
         //By default begin in downtown Santa Cruz
         var myLatlng = new google.maps.LatLng(36.970231,-122.025061);
@@ -42,7 +42,7 @@ angular.module('ionic.example', ['ionic'])
         $scope.map = map;
       }
 
-      google.maps.event.addDomListener(window, 'load', initialize);
+      //google.maps.event.addDomListener(window, 'load', initialize);
 
       $scope.centerOnMe = function() {
 
