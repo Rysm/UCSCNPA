@@ -8,6 +8,12 @@ angular.module('app.routes', [])
   // Each state's controller can be found in controllers.js
   $stateProvider
 
+    .state('menu', {
+      url: '/home-menu',
+      abstract:true,
+      templateUrl: 'templates/menu.html'
+    })
+
     .state('menu.home', {
       url: '/home',
       views: {
@@ -28,10 +34,14 @@ angular.module('app.routes', [])
       }
     })
 
-    .state('menu', {
-      url: '/home-menu',
-      abstract:true,
-      templateUrl: 'templates/menu.html'
+    .state('menu.profile', {
+      url: '/profile',
+      views: {
+        'side-menu21': {
+          templateUrl: 'templates/profile.html',
+          controller: 'profileCtrl'
+        }
+      }
     })
 
     .state('menu.requestEvent', {
@@ -44,28 +54,8 @@ angular.module('app.routes', [])
       }
     })
 
-    .state('menu.createEvent', {
-      url: '/create',
-      views: {
-        'side-menu21': {
-          templateUrl: 'templates/createEvent.html',
-          controller: 'createEventCtrl'
-        }
-      }
-    })
-
-    .state('menu.editOrg', {
-      url: '/edit',
-      views: {
-        'side-menu21': {
-          templateUrl: 'templates/editOrg.html',
-          controller: 'editOrgCtrl'
-        }
-      }
-    })
-
     .state('menu.createOrg', {
-      url: '/page7',
+      url: '/createOrg',
       views: {
         'side-menu21': {
           templateUrl: 'templates/createOrg.html',
@@ -74,12 +64,22 @@ angular.module('app.routes', [])
       }
     })
 
-    .state('menu.profile', {
-      url: '/profile',
+        .state('menu.editOrg', {
+          url: '/edit',
+          views: {
+            'side-menu21': {
+              templateUrl: 'templates/editOrg.html',
+              controller: 'editOrgCtrl'
+            }
+          }
+        })
+
+    .state('menu.createEvent', {
+      url: '/create',
       views: {
         'side-menu21': {
-          templateUrl: 'templates/profile.html',
-          controller: 'profileCtrl'
+          templateUrl: 'templates/createEvent.html',
+          controller: 'createEventCtrl'
         }
       }
     })
