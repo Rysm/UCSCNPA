@@ -22,7 +22,7 @@ angular.module('app.routes', [])
       url: '/search',
       views: {
         'side-menu21': {
-          templateUrl: 'templates/🔍Search.html',
+          templateUrl: 'templates/search.html',
           controller: 'SearchCtrl'
         }
       }
@@ -38,8 +38,8 @@ angular.module('app.routes', [])
       url: '/request',
       views: {
         'side-menu21': {
-          templateUrl: 'templates/🎪RequestEvent.html',
-          controller: '🎪RequestEventCtrl'
+          templateUrl: 'templates/requestEvent.html',
+          controller: 'RequestEventCtrl'
         }
       }
     })
