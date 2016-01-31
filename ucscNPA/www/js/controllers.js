@@ -8,7 +8,7 @@ angular.module('app.controllers', [])
 
 })
 
-.controller('RequestEventCtrl', function($scope) {
+.controller('🎪RequestEventCtrl', function($scope) {
 
 })
 

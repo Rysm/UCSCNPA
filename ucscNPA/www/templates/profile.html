@@ -1,62 +1,14 @@
-<ion-view title="profile"style="background-color: rgb(0,150,100)">
+<ion-view title="Profile">
     <ion-content overflow-scroll="true" padding="true" class="has-header">
-        <div style="line-height: 250px; background-color: rgb(0,0,0); border: 1px solid rgb(238, 238, 238); border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; text-align: center;">
+        <div style="line-height: 250px; background-color: rgb(255, 255, 255); border: 1px solid rgb(238, 238, 238); border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; text-align: center;">
             <i class="icon ion-image" style="font-size: 64px; color: rgb(136, 136, 136); vertical-align: middle;"></i>
         </div>
         <h3>
-          <style> {color: #483D8B;} </style>
-            <center>"Name"</center>
-            </style>
+            <center>Name</center>
         </h3>
         <form class="list"></form>
         <ion-list>
             <ion-toggle toggle-class="toggle-positive" ng-checked="true">Display Email</ion-toggle>
         </ion-list>
-        <a>"class="button onclick = "$cordovaCamer.getPictures(options)">Add Photo</a>
-        .controller('CameraCtrl', function($scope, $cordovaCamera, $ionicLoading, $local storage){
-            $scope.data = { "ImageURI" : "Select Photo" };
-                var options = {
-                quality:50,
-                sourceType: Camera.PictureSourceType.CAMERA
-          };
-          	  $scope.selectPicture = function() { 
-            		var options = {
-            			quality: 50,
-            			destinationType: Camera.DestinationType.FILE_URI,
-            			sourceType: Camera.PictureSourceType.PHOTOLIBRARY
-            		};
-
-              	  $cordovaCamera.getPicture(options).then(
-              		function(imageURI) {
-              			window.resolveLocalFileSystemURI(imageURI, function(fileEntry) {
-              				$scope.picData = fileEntry.nativeURL;
-              				$scope.ftLoad = true;
-              				var image = document.getElementById('myImage');
-              				image.src = fileEntry.nativeURL;
-                			});
-              			$ionicLoading.show({template: 'Loading...', duration:500});
-              		},
-              		function(err){
-              			$ionicLoading.show({template: 'Error', duration:500});
-              		})
-              	};
-            $scope.uploadPicture = function() {
-                		var fileURL = $scope.picData;
-                		var options = new FileUploadOptions();
-                		options.fileKey = "file";
-                		options.fileName = fileURL.substr(fileURL.lastIndexOf('/') + 1);
-                		options.mimeType = "image/jpeg";
-                		options.chunkedMode = true;
-          
-          		var params = {};
-          		params.value1 = "someparams";
-                  params.value2 = "otherparams";
-          
-          		options.params = params;
-          
-          		var ft = new FileTransfer();
-          		ft.upload(fileURL, encodeURI("http://www.yourdomain.com/upload.php"), viewUploadedPictures, function(error) {$ionicLoading.show({template: 'Errore di connessione...'});
-          		$ionicLoading.hide();}, options);
-               
-        </ion-content>
+    </ion-content>
 </ion-view>

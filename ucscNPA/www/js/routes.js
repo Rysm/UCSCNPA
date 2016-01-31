@@ -1,4 +1,4 @@
-angular.module('app.routes', ['ionic', 'app.controllers', 'app.routes', 'app.services', 'app.directives','firebase','ngStorage', 'ngCordova','firebase','ngMessages'])
+angular.module('app.routes', [])
 
 .config(function($stateProvider, $urlRouterProvider) {
 
@@ -7,27 +7,6 @@ angular.module('app.routes', ['ionic', 'app.controllers', 'app.routes', 'app.ser
   // Set up the various states which the app can be in.
   // Each state's controller can be found in controllers.js
   $stateProvider
-    .state('maps', {
-      url: '/nearby',
-      templateUrl: 'templates/maps.html',
-      controller: 'mapsCtrl'
-    })
-      .state('login', {
-      url: '/login',
-      templateUrl: 'templates/login/login.html',
-      controller:'loginController'
-    })
-    .state('forgot', {
-      url: '/forgot',
-      templateUrl: 'templates/forgot/forgotPassword.html',
-      controller:'forgotController'
-    })
-    .state('register', {
-      url: '/register',
-      templateUrl: 'templates/register/createAccount.html',
-      controller:'registerController'
-    })
-
 
     .state('menu.home', {
       url: '/home',
@@ -39,11 +18,11 @@ angular.module('app.routes', ['ionic', 'app.controllers', 'app.routes', 'app.ser
       }
     })
 
-    .state('menu.Search', {
+    .state('menu.🔍Search', {
       url: '/search',
       views: {
         'side-menu21': {
-          templateUrl: 'templates/search.html',
+          templateUrl: 'templates/🔍Search.html',
           controller: 'SearchCtrl'
         }
       }
@@ -55,12 +34,12 @@ angular.module('app.routes', ['ionic', 'app.controllers', 'app.routes', 'app.ser
       templateUrl: 'templates/menu.html'
     })
 
-    .state('menu.requestEvent', {
+    .state('menu.🎪RequestEvent', {
       url: '/request',
       views: {
         'side-menu21': {
-          templateUrl: 'templates/requestEvent.html',
-          controller: 'RequestEventCtrl'
+          templateUrl: 'templates/🎪RequestEvent.html',
+          controller: '🎪RequestEventCtrl'
         }
       }
     })
@@ -105,6 +84,29 @@ angular.module('app.routes', ['ionic', 'app.controllers', 'app.routes', 'app.ser
       }
     })
 
+    .state('login', {
+      url: '/login',
+      templateUrl: 'templates/login.html',
+      controller: 'loginCtrl'
+    })
+
+    .state('createAccount', {
+      url: '/signup',
+      templateUrl: 'templates/createAccount.html',
+      controller: 'registerCtrl'
+    })
+
+    .state('forgotPassword', {
+      url: '/forgot',
+      templateUrl: 'templates/forgotPassword.html',
+      controller: 'forgotCtrl'
+    })
+
+    .state('maps', {
+      url: '/nearby',
+      templateUrl: 'templates/maps.html',
+      controller: 'mapsCtrl'
+    })
     ;
 
   // if none of the above states are matched, use this as the fallback
