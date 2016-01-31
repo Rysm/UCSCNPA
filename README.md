@@ -1,6 +1,6 @@
-# UCSCNPA
+# BridgeNp
 
-UCSC NPA is an application that delivers a platform for both individuals in nonprofit organizations and nonprofit organizations.
+UCSC NPA is an application that delivers a platform for both individuals in nonprofit organizations and nonprofit organizations to find one another.
 
 Individuals:
 - find nearby nonprofits
