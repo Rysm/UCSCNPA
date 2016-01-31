@@ -39,4 +39,8 @@ angular.module('app.controllers', [])
 .controller('forgotPasswordCtrl', function($scope) {
 
 })
+   
+.controller('mapsCtrl', function($scope) {
+
+})
  

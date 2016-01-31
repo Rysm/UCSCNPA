@@ -143,6 +143,16 @@ angular.module('app.routes', [])
     })
         
       
+    
+      
+        
+    .state('maps', {
+      url: '/nearby',
+      templateUrl: 'templates/maps.html',
+      controller: 'mapsCtrl'
+    })
+        
+      
     ;
 
   // if none of the above states are matched, use this as the fallback
