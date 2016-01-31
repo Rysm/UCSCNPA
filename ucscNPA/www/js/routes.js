@@ -18,7 +18,7 @@ angular.module('app.routes', [])
       }
     })
 
-    .state('menu.🔍Search', {
+    .state('menu.Search', {
       url: '/search',
       views: {
         'side-menu21': {
