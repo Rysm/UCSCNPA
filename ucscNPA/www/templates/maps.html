@@ -1,5 +1,6 @@
 <body ng-app="app" ng-control="AppCtrl">
 <ion-view hide-back-button="false" title="Nonprofits Near Me">
+
     <ion-content overflow-scroll="true" padding="true" class="has-header">
 
     <meta charset="utf-8">
@@ -14,14 +15,12 @@
 
     <!-- maps javascript -->
     <script src="js/maps.js"></script>
-    <ion-nav-bar class="bar-stable">
-        <ion-nav-back-button class="button-icon icon ion-ios-arrow-back">Back</ion-nav-back-button>
-    </ion-nav-bar>
 
     <ion-content>
       <iframe width="2000" height="1000" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/view?zoom=12&center=36.9741%2C-122.0308&key=AIzaSyDystyv7H4u-ubDrYMWTNmrIb9fPVgH9A0" allowfullscreen></iframe>
     </ion-content>
     <ion-footer-bar class="bar-stable">
+    <button class="button" ng-click="$ionicGoBack()">Back</button>
     </ion-footer-bar>
 
 </ion-content>
