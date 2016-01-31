@@ -34,7 +34,7 @@ angular.module('app.routes', [])
       templateUrl: 'templates/menu.html'
     })
 
-    .state('menu.🎪RequestEvent', {
+    .state('menu.requestEvent', {
       url: '/request',
       views: {
         'side-menu21': {
