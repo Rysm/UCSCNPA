@@ -1,17 +1,7 @@
-<!-- GOOGLE MAPS HTML -->
-<html >
-  <head>
-    <meta charset="UTF-8">
-    <title>Non-profits Near Me</title>
+<body ng-app="app" ng-control="AppCtrl">
+<ion-view hide-back-button="false" title="Nonprofits Near Me">
+    <ion-content overflow-scroll="true" padding="true" class="has-header">
 
-        <link rel="stylesheet" href="css/style.css">
-
-  </head>
-
-  <body>
-
-    <html ng-app="ionic.example">
-  <head>
     <meta charset="utf-8">
     <title>Non-profits Near Me</title>
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
@@ -24,19 +14,15 @@
 
     <!-- maps javascript -->
     <script src="js/maps.js"></script>
+    <ion-nav-bar class="bar-stable">
+        <ion-nav-back-button class="button-icon icon ion-ios-arrow-back">Back</ion-nav-back-button>
+    </ion-nav-bar>
 
-  </head>
-  <body ng-controller="MapCtrl">
-    
-    <ion-header-bar class="bar-stable" ng-init="init()">
-      <h1 class="title">Non-profits Near Me</h1>
-    </ion-header-bar>
     <ion-content>
-      <div id="map" data-tap-disabled="true"></div>
+      <iframe width="2000" height="1000" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/view?zoom=12&center=36.9741%2C-122.0308&key=AIzaSyDystyv7H4u-ubDrYMWTNmrIb9fPVgH9A0" allowfullscreen></iframe>
     </ion-content>
     <ion-footer-bar class="bar-stable">
-      <a ng-click="centerOnMe()" class="button button-icon icon ion-navigate">Where Am I?</a>
     </ion-footer-bar>
 
-  </body>
-</html>
+</ion-content>
+</ion-view>

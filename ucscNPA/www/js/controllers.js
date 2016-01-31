@@ -1,4 +1,5 @@
 angular.module('app.controllers', [])
+angular.module('ionic-firebase-seed', ['ionic', 'firebase'])
 
 .controller('homeCtrl', function($scope) {
 
