@@ -87,19 +87,19 @@ angular.module('app.routes', [])
     .state('login', {
       url: '/login',
       templateUrl: 'templates/login.html',
-      controller: 'loginController'
+      controller: 'loginCtrl'
     })
 
     .state('createAccount', {
       url: '/signup',
       templateUrl: 'templates/createAccount.html',
-      controller: 'registerController'
+      controller: 'registerCtrl'
     })
 
     .state('forgotPassword', {
       url: '/forgot',
       templateUrl: 'templates/forgotPassword.html',
-      controller: 'forgotController'
+      controller: 'forgotCtrl'
     })
 
     .state('maps', {
