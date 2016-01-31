@@ -1,5 +1,5 @@
 <body ng-app="app" ng-control="AppCtrl">
-<ion-view title="Create Event">
+<ion-view title="Create Event"style = "background-color:#00FFFF;">
     <ion-content overflow-scroll="true" padding="true" class="has-header">
         <form class="list">
             <label class="item item-input item-select">
@@ -29,7 +29,7 @@
                 <input type="text" ng-model="message.email" class="msg-input" placeholder="Email">
             </label>
         </form>
-        <button type="submit" class="button button-small" ng-click="addEvent(name,desc,loc,phone,email)" id="add-message">
+        <button type="submit" class="button button-small" ng-click="addEvent(name,desc,loc,phone,email)" id="add-message" style= "color:PaleVoiletRed;">
           Submit!</button>
     </ion-content>
 </ion-view>
