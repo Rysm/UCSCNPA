@@ -34,14 +34,13 @@
               				var image = document.getElementById('myImage');
               				image.src = fileEntry.nativeURL;
                 			});
-              			$ionicLoading.show({template: 'Foto acquisita...', duration:500});
+              			$ionicLoading.show({template: 'Loading...', duration:500});
               		},
               		function(err){
-              			$ionicLoading.show({template: 'Errore di caricamento...', duration:500});
+              			$ionicLoading.show({template: 'Error', duration:500});
               		})
               	};
             $scope.uploadPicture = function() {
-          		$ionicLoading.show({template: 'Sto inviando la foto...'});
                 		var fileURL = $scope.picData;
                 		var options = new FileUploadOptions();
                 		options.fileKey = "file";
