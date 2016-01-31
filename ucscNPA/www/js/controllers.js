@@ -14,7 +14,7 @@ angular.module('app.controllers', [])
 
 .controller('createEventCtrl', function($scope, Auth, Messages) {
 
-  
+
 })
 
 .controller('editOrgCtrl', function($scope) {

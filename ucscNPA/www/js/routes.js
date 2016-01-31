@@ -7,9 +7,7 @@ angular.module('app.routes', [])
   // Set up the various states which the app can be in.
   // Each state's controller can be found in controllers.js
   $stateProvider
-    
-      
-        
+
     .state('menu.home', {
       url: '/home',
       views: {
@@ -19,11 +17,9 @@ angular.module('app.routes', [])
         }
       }
     })
-        
-      
-    
-      
-        
+
+
+
     .state('menu.🔍Search', {
       url: '/search',
       views: {
@@ -33,19 +29,19 @@ angular.module('app.routes', [])
         }
       }
     })
-        
-      
-    
-      
+
+
+
+
     .state('menu', {
       url: '/home-menu',
       abstract:true,
       templateUrl: 'templates/menu.html'
     })
-      
-    
-      
-        
+
+
+
+
     .state('menu.🎪RequestEvent', {
       url: '/request',
       views: {
@@ -55,11 +51,11 @@ angular.module('app.routes', [])
         }
       }
     })
-        
-      
-    
-      
-        
+
+
+
+
+
     .state('menu.createEvent', {
       url: '/create',
       views: {
@@ -69,11 +65,11 @@ angular.module('app.routes', [])
         }
       }
     })
-        
-      
-    
-      
-        
+
+
+
+
+
     .state('menu.editOrg', {
       url: '/edit',
       views: {
@@ -83,11 +79,11 @@ angular.module('app.routes', [])
         }
       }
     })
-        
-      
-    
-      
-        
+
+
+
+
+
     .state('menu.createOrg', {
       url: '/page7',
       views: {
@@ -97,11 +93,11 @@ angular.module('app.routes', [])
         }
       }
     })
-        
-      
-    
-      
-        
+
+
+
+
+
     .state('menu.profile', {
       url: '/profile',
       views: {
@@ -111,48 +107,48 @@ angular.module('app.routes', [])
         }
       }
     })
-        
-      
-    
-      
-        
+
+
+
+
+
     .state('login', {
       url: '/login',
       templateUrl: 'templates/login.html',
       controller: 'loginCtrl'
     })
-        
-      
-    
-      
-        
+
+
+
+
+
     .state('createAccount', {
       url: '/signup',
       templateUrl: 'templates/createAccount.html',
       controller: 'createAccountCtrl'
     })
-        
-      
-    
-      
-        
+
+
+
+
+
     .state('forgotPassword', {
       url: '/forgot',
       templateUrl: 'templates/forgotPassword.html',
       controller: 'forgotPasswordCtrl'
     })
-        
-      
-    
-      
-        
+
+
+
+
+
     .state('maps', {
       url: '/nearby',
       templateUrl: 'templates/maps.html',
       controller: 'mapsCtrl'
     })
-        
-      
+
+
     ;
 
   // if none of the above states are matched, use this as the fallback
